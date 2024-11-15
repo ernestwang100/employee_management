@@ -1,0 +1,72 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  border-collapse: collapse; /* Merge borders between cells */
+}
+
+th,
+td {
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  font-size: 1.2rem; /* Increased font size for table */
+}
+
+th {
+  background-color: var(--color-background-soft);
+  color: var(--color-heading);
+}
+
+input[type='text'] {
+  width: 90%;
+  padding: 1rem;
+  font-size: 1.2rem; /* Increased font size for input */
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem; /* Increased font size for buttons */
+  color: #333;
+  background-color: hsla(160, 100%, 37%, 1);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: hsla(160, 100%, 37%, 0.8);
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+/* Additional Adjustments for Tables on Smaller Screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 1rem; /* Reduce table font size on smaller screens */
+  }
+}
