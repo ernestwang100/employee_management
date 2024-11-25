@@ -8,7 +8,7 @@ let user = userStore()
 let router = useRouter()
 
 // Reactive data to store form information
-let loginUser = reactive({ username: '', userPwd: '' })
+let loginUser = reactive({ username: 'zhangsan', userPwd: '123456' })
 // Reactive data to store validation messages
 let usernameMsg = ref('')
 let userPwdMsg = ref('')
@@ -39,6 +39,8 @@ function checkUserPwd() {
 async function login() {
   if (checkUsername() && checkUserPwd()) {
     let { data } = await request.post('user/login', loginUser)
+    console.log(data)
+
     if (data.code === 200) {
       alert('Login successful')
       // Update Pinia data

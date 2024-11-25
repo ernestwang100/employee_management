@@ -17,7 +17,7 @@ async function loadSchedules() {
 }
 
 async function addSchedule() {
-  let { data } = await request.get('schedule/addSchedule', { params: { uid: user.uid } })
+  let { data } = await request.get('schedule/addDefaultSchedule', { params: { uid: user.uid } })
   if (data.code === 200) {
     loadSchedules()
   } else {
