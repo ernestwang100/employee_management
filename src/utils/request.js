@@ -1,10 +1,10 @@
 import axios from 'axios';
-//创建instance实例
+//build instances
 let request = axios.create({
     baseURL: 'http://localhost:8080',
     timeout: 10000
 });
-//请求拦截
+//request
 request.interceptors.request.use(
     config => {
         return config;
@@ -13,7 +13,7 @@ request.interceptors.request.use(
         return Promise.reject(error);
     }
 );
-//响应拦截
+//respond
 request.interceptors.response.use(
     response => {
         return response;
